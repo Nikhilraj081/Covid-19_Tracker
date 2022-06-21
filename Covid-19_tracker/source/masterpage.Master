@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.Master.cs" Inherits="MYPROJECT1.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- javascript -->
+     <script type="text/javascript">
+         function togglemenu() {
+             document.getElementById('sidebar').classList.toggle('active');
+         }
+	</script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body style="background:#ebe0e0">
+   
+               <div  class="wrapper">                   
+                        <div class="heading">  
+                            <form class="example"  style="margin-top:35px;margin-left:700px;max-width:300px">
+                                 <input type="text" placeholder="Search.." name="search2">
+                                 <button type="submit"><i class="fa fa-search"></i></button>
+                                <button id="login_button" runat="server" type="button" style="margin-left:320px;margin-top:-33px;width:80px;height:33px" onclick="location.href='login.aspx'">Login</button>
+                                <p id="welcome_text1" style="color:white;font-size:15px; margin-top:0;text-indent:2em;padding:0 5px 0 5px" runat="server"></p>
+                                 <p id="welcome_text2" style="color:white;font-size:20px; margin-top:-0.5em;margin-left:10px;text-indent:2em;padding:0 5px 0 5px" runat="server"></p>
+                            </form>
+                                 <div id="sidebar" onclick="togglemenu()" >
+			                            <div class="toggle-btn">              
+				                                <span></span>
+				                                <span></span>
+                                                <span></span>			
+			                            </div>
+			                            <ul>
+				                             <li><a href="homepage2.aspx">HOME</a></li>
+				                             <li><a href="">About us</a></li>
+				                            <li><a href="postad1.aspx">post ad</a></li>							
+				                            <li><a href="">search</a></li>
+                                            <li><a href="my_profile.aspx">My account</a></li>
+				                            <li><a href="">contact</a></li>
+			                            </ul>
+		                         </div>                                                                                    
+                         </div>                   
+                     </div>
+                     <div class="navigation">
+                        <nav class="navbar">
+	                        <a href="index1.aspx" >Home</a>
+	                        <a href="">About Us</a>
+	                        <a href="postad1.aspx">Post Ad</a>
+	                         <a href="">Search</a>
+                            <a href="my_profile.aspx">My Account</a>
+                            <a href="">Contact Us</a>	
+                        </nav>   
+                    </div>
+                                               
+               <form runat="server" style="overflow:hidden">
+                   <div style="margin-top:-190px">
+                             
+                               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                 
+                               </asp:ContentPlaceHolder> 
+                           
+                   </div>
+                 </form>
+                   <footer class="footer">
+
+                  </footer>
+                                     
+   
+    
+  
+</body>
+</html>
